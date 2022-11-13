@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/editor/menu_bar/menu_bar.gd" type="Script" id=1]
+[ext_resource path="res://scenes/editor/menu_bar/menu_btn.gd" type="Script" id=2]
+[ext_resource path="res://assets/icons/material/white_48dp/arrow_back_ios_new_white_18dp.svg" type="Texture" id=3]
+
+[node name="MenuBar" type="PanelContainer"]
+margin_right = 1010.0
+margin_bottom = 34.0
+script = ExtResource( 1 )
+
+[node name="HFrame" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1003.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+
+[node name="Return" type="Button" parent="HFrame"]
+margin_right = 74.0
+margin_bottom = 24.0
+text = "Return"
+icon = ExtResource( 3 )
+align = 0
+
+[node name="File" type="MenuButton" parent="HFrame"]
+margin_left = 78.0
+margin_right = 113.0
+margin_bottom = 24.0
+focus_mode = 2
+text = "File"
+items = [ "New File", null, 0, false, false, 0, 0, null, "", false, "Open File...", null, 0, false, false, 1, 0, null, "", false, "Export File...", null, 0, false, false, 2, 0, null, "", false, "Save", null, 0, false, false, 3, 0, null, "", false ]
+script = ExtResource( 2 )
+
+[node name="Edit" type="MenuButton" parent="HFrame"]
+visible = false
+margin_left = 74.0
+margin_right = 110.0
+margin_bottom = 20.0
+focus_mode = 2
+text = "Edit"
+script = ExtResource( 2 )
+
+[node name="Help" type="MenuButton" parent="HFrame"]
+visible = false
+margin_left = 74.0
+margin_right = 116.0
+margin_bottom = 20.0
+focus_mode = 2
+text = "Help"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="HFrame/Return" to="." method="_on_Return_pressed"]
+[connection signal="item_pressed" from="HFrame/File" to="." method="_on_File_item_pressed"]
+[connection signal="item_pressed" from="HFrame/Edit" to="." method="_on_Edit_item_pressed"]
+[connection signal="item_pressed" from="HFrame/Help" to="." method="_on_Help_item_pressed"]

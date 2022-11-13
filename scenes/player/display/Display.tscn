@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/atlas_player/atlas_player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/player/display/display.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=38]
+
+[sub_resource type="AtlasTexture" id=39]
+
+[node name="Display" type="PanelContainer"]
+margin_right = 240.0
+margin_bottom = 288.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 38 )
+script = ExtResource( 2 )
+
+[node name="ColorBG" type="ColorRect" parent="."]
+margin_right = 240.0
+margin_bottom = 288.0
+mouse_filter = 2
+
+[node name="TextureBG" type="TextureRect" parent="."]
+margin_right = 240.0
+margin_bottom = 288.0
+rect_clip_content = true
+mouse_filter = 2
+expand = true
+stretch_mode = 7
+
+[node name="AtlasPlayer" type="TextureRect" parent="."]
+margin_right = 240.0
+margin_bottom = 288.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource( 39 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 1 )
+hframe = 5
+vframe = 2

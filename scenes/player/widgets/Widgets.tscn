@@ -1,0 +1,208 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/icons/material/custom/timestamp_grabber.svg" type="Texture" id=1]
+[ext_resource path="res://assets/icons/material/custom/timestamp_grabber_empty.svg" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/GoogleSans/GoogleSans-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/icons/material/white_48dp/shuffle_white_48dp.svg" type="Texture" id=4]
+[ext_resource path="res://assets/icons/material/white_48dp/skip_next_white_48dp.svg" type="Texture" id=5]
+[ext_resource path="res://assets/icons/material/white_48dp/skip_previous_white_48dp.svg" type="Texture" id=6]
+[ext_resource path="res://assets/icons/material/white_48dp/pause_circle_white_48dp.svg" type="Texture" id=7]
+[ext_resource path="res://assets/icons/material/white_48dp/play_circle_white_48dp.svg" type="Texture" id=8]
+[ext_resource path="res://assets/icons/material/white_48dp/repeat_white_48dp.svg" type="Texture" id=9]
+
+
+[sub_resource type="DynamicFont" id=47]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=48]
+default_font = SubResource( 47 )
+
+[sub_resource type="StyleBoxFlat" id=45]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 10.0
+content_margin_bottom = 25.0
+bg_color = Color( 0.105882, 0.109804, 0.113725, 1 )
+
+[sub_resource type="StyleBoxFlat" id=40]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.556863, 0.556863, 0.556863, 0.54902 )
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 20
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=43]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.156863, 0.701961, 0.34902, 1 )
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 20
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=46]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.854902, 0.854902, 0.854902, 1 )
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 20
+anti_aliasing_size = 0.01
+
+[node name="Widgets" type="PanelContainer"]
+anchor_top = 0.82
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = SubResource( 48 )
+custom_styles/panel = SubResource( 45 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Divider" type="HBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 1004.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 0, 60 )
+alignment = 1
+
+[node name="Song" type="HBoxContainer" parent="Divider"]
+margin_right = 244.0
+margin_bottom = 73.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Artwork" type="TextureRect" parent="Divider/Song"]
+margin_bottom = 73.0
+
+[node name="VBox" type="VBoxContainer" parent="Divider/Song"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 73.0
+
+[node name="Title" type="Label" parent="Divider/Song/VBox"]
+margin_bottom = 21.0
+
+[node name="Artist" type="Label" parent="Divider/Song/VBox"]
+margin_top = 25.0
+margin_bottom = 46.0
+
+[node name="Player" type="VBoxContainer" parent="Divider"]
+margin_left = 248.0
+margin_right = 736.0
+margin_bottom = 73.0
+size_flags_horizontal = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Divider/Player"]
+margin_right = 488.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 25
+alignment = 1
+
+[node name="Shuffle" type="TextureButton" parent="Divider/Player/Buttons"]
+margin_left = 100.0
+margin_right = 130.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 30, 30 )
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+
+[node name="Previous" type="TextureButton" parent="Divider/Player/Buttons"]
+margin_left = 155.0
+margin_right = 195.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 40, 40 )
+texture_normal = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="Play" type="TextureButton" parent="Divider/Player/Buttons"]
+margin_left = 220.0
+margin_right = 268.0
+margin_bottom = 48.0
+toggle_mode = true
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+
+[node name="Next" type="TextureButton" parent="Divider/Player/Buttons"]
+margin_left = 293.0
+margin_right = 333.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 40, 40 )
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="Repeat" type="TextureButton" parent="Divider/Player/Buttons"]
+margin_left = 358.0
+margin_right = 388.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 30, 30 )
+texture_normal = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="Timestamp" type="HBoxContainer" parent="Divider/Player"]
+margin_top = 52.0
+margin_right = 488.0
+margin_bottom = 73.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Current" type="Label" parent="Divider/Player/Timestamp"]
+margin_right = 44.0
+margin_bottom = 21.0
+size_flags_vertical = 1
+text = "00:00"
+align = 2
+valign = 1
+
+[node name="Progressbar" type="MarginContainer" parent="Divider/Player/Timestamp"]
+margin_left = 48.0
+margin_right = 440.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 4
+custom_constants/margin_left = 4
+
+[node name="Slider" type="HSlider" parent="Divider/Player/Timestamp/Progressbar"]
+margin_left = 4.0
+margin_right = 388.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_icons/grabber_highlight = ExtResource( 1 )
+custom_icons/grabber = ExtResource( 2 )
+custom_styles/slider = SubResource( 40 )
+custom_styles/grabber_area_highlight = SubResource( 43 )
+custom_styles/grabber_area = SubResource( 46 )
+ticks_on_borders = true
+
+[node name="End" type="Label" parent="Divider/Player/Timestamp"]
+margin_left = 444.0
+margin_right = 488.0
+margin_bottom = 21.0
+size_flags_vertical = 1
+text = "00:00"
+valign = 1
+
+[node name="Extra" type="HBoxContainer" parent="Divider"]
+margin_left = 740.0
+margin_right = 984.0
+margin_bottom = 73.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+alignment = 2

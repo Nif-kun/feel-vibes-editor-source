@@ -1,0 +1,163 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "CameraDrag2D",
+"language": "GDScript",
+"path": "res://library/nui_lib/2D/camera_drag_2d.gd"
+}, {
+"base": "Reference",
+"class": "CameraSlide2D",
+"language": "GDScript",
+"path": "res://library/nui_lib/2D/camera_slide_2d.gd"
+}, {
+"base": "Reference",
+"class": "CameraZoom2D",
+"language": "GDScript",
+"path": "res://library/nui_lib/2D/camera_zoom_2d.gd"
+}, {
+"base": "PanelContainer",
+"class": "Display",
+"language": "GDScript",
+"path": "res://scenes/player/display/display.gd"
+}, {
+"base": "Camera2D",
+"class": "DisplayCamera",
+"language": "GDScript",
+"path": "res://scenes/editor/viewer/camera.gd"
+}, {
+"base": "PanelContainer",
+"class": "Editor",
+"language": "GDScript",
+"path": "res://scenes/editor/editor.gd"
+}, {
+"base": "StrictFocusButton",
+"class": "IconButton",
+"language": "GDScript",
+"path": "res://scripts/icon_button.gd"
+}, {
+"base": "PanelContainer",
+"class": "Notif",
+"language": "GDScript",
+"path": "res://scripts/notif.gd"
+}, {
+"base": "PanelContainer",
+"class": "PropBase",
+"language": "GDScript",
+"path": "res://scenes/editor/properties/default/prop_base.gd"
+}, {
+"base": "Reference",
+"class": "ShortLib",
+"language": "GDScript",
+"path": "res://library/short_lib.gd"
+}, {
+"base": "Button",
+"class": "StrictFocusButton",
+"language": "GDScript",
+"path": "res://scripts/strict_focus_button.gd"
+}, {
+"base": "SpinBox",
+"class": "StrictSpinBox",
+"language": "GDScript",
+"path": "res://scripts/strict_spinbox.gd"
+}, {
+"base": "LineEdit",
+"class": "SubtleLineEdit",
+"language": "GDScript",
+"path": "res://scripts/subtle_line_edit.gd"
+}, {
+"base": "PanelContainer",
+"class": "Viewer",
+"language": "GDScript",
+"path": "res://scenes/editor/viewer/viewer.gd"
+}, {
+"base": "PanelContainer",
+"class": "WebEditor",
+"language": "GDScript",
+"path": "res://scenes/editor/web/web_editor.gd"
+} ]
+_global_script_class_icons={
+"CameraDrag2D": "",
+"CameraSlide2D": "",
+"CameraZoom2D": "",
+"Display": "",
+"DisplayCamera": "",
+"Editor": "",
+"IconButton": "",
+"Notif": "",
+"PropBase": "",
+"ShortLib": "",
+"StrictFocusButton": "",
+"StrictSpinBox": "",
+"SubtleLineEdit": "",
+"Viewer": "",
+"WebEditor": ""
+}
+
+[application]
+
+config/name="FeelVibes - Editor"
+run/main_scene="res://scenes/FeelVibes.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="FeelVibes"
+boot_splash/image="res://icon.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 0.121569, 0.113725, 0.129412, 1 )
+config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
+
+[autoload]
+
+SceneHandler="*res://scripts/scene_handler.gd"
+
+[display]
+
+window/dpi/allow_hidpi=true
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/atlas_player/plugin.cfg", "res://addons/dockable_container/plugin.cfg", "res://addons/flex_container/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/native_dialogs/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+theme/use_hidpi=true
+
+[input]
+
+mouse_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+mouse_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+zoom_in={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+zoom_out={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[mono]
+
+project/assembly_name="FeelVibes - Editor"
+
+[physics]
+
+common/enable_pause_aware_picking=true

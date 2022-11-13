@@ -1,0 +1,21 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/fonts/GoogleSans/GoogleSans-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/feel_vibes.gd" type="Script" id=2]
+[ext_resource path="res://scenes/editor/web/WebEditor.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=26]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=27]
+default_font = SubResource( 26 )
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[node name="Atune" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 27 )
+custom_styles/panel = SubResource( 8 )
+script = ExtResource( 2 )
+editor = ExtResource( 3 )

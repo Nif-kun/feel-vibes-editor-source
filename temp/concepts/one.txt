@@ -1,0 +1,11 @@
+> PROFILE for user acc. Be like Twitter on profile. Simple and straightforward. Use acc profile pic as icon to identify. Change the design and probably put the username instead so it stands out between the menu button but doesn not highlight itself. Just make it look distinct.
+> HOME tab as initial. Kinda like FB or Twitter. Twitter might work best.
+> SEARCH all is optional until needed is complete
+> On top in LIBRARY tab:
+[NO-CHANGE] Not priority but when possible, include back and redo-forward button.
+[ADD] Search bar before any of below. If text present, it will show the thing your looking for within the tab you're in. E.g. a song in songs.
+[ADD] Songs, shows all songs that are from local. Add a starter info in middle that points at a plus button at top right. Dialogue shows input to add for download song location and custom paths of local songs (can add any amount, file reader will do the rest).
+[MODIFY] Playlist, shows every playlist. If the playlist has only local, it will have a green folder icon. If it has partial, it will have a yellow folder icon. If it has none, no icon.
+[REPLACE] Artist will become Following
+[NO-CHANGE] Add album if possible (hopefully metadata works)
+[ADD] Artworks which will show all available display animation.

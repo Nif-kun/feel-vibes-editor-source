@@ -1,0 +1,9 @@
+F:\Programming\AppDev\Projects\feel-vibes-editor\.mono\temp\bin\Debug\FeelVibes.dll
+F:\Programming\AppDev\Projects\feel-vibes-editor\.mono\temp\bin\Debug\FeelVibes.pdb
+F:\Programming\AppDev\Projects\feel-vibes-editor\.mono\temp\obj\Debug\FeelVibes.csproj.AssemblyReference.cache
+F:\Programming\AppDev\Projects\feel-vibes-editor\.mono\temp\obj\Debug\FeelVibes.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programming\AppDev\Projects\feel-vibes-editor\.mono\temp\obj\Debug\FeelVibes.AssemblyInfoInputs.cache
+F:\Programming\AppDev\Projects\feel-vibes-editor\.mono\temp\obj\Debug\FeelVibes.AssemblyInfo.cs
+F:\Programming\AppDev\Projects\feel-vibes-editor\.mono\temp\obj\Debug\FeelVibes.csproj.CoreCompileInputs.cache
+F:\Programming\AppDev\Projects\feel-vibes-editor\.mono\temp\obj\Debug\FeelVibes.dll
+F:\Programming\AppDev\Projects\feel-vibes-editor\.mono\temp\obj\Debug\FeelVibes.pdb

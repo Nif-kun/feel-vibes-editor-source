@@ -1,0 +1,9 @@
+F:\Programming\AppDev\Projects\attune\.mono\temp\bin\Debug\ATTune.dll
+F:\Programming\AppDev\Projects\attune\.mono\temp\bin\Debug\ATTune.pdb
+F:\Programming\AppDev\Projects\attune\.mono\temp\obj\Debug\ATTune.csproj.AssemblyReference.cache
+F:\Programming\AppDev\Projects\attune\.mono\temp\obj\Debug\ATTune.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programming\AppDev\Projects\attune\.mono\temp\obj\Debug\ATTune.AssemblyInfoInputs.cache
+F:\Programming\AppDev\Projects\attune\.mono\temp\obj\Debug\ATTune.AssemblyInfo.cs
+F:\Programming\AppDev\Projects\attune\.mono\temp\obj\Debug\ATTune.csproj.CoreCompileInputs.cache
+F:\Programming\AppDev\Projects\attune\.mono\temp\obj\Debug\ATTune.dll
+F:\Programming\AppDev\Projects\attune\.mono\temp\obj\Debug\ATTune.pdb

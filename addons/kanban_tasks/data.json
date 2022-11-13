@@ -1,0 +1,149 @@
+{
+  "settings": {
+    "show_details_preview": true
+  },
+  "categories": [
+    {
+      "title": "Minor",
+      "color": "6495ed"
+    },
+    {
+      "title": "Bug",
+      "color": "e96915"
+    },
+    {
+      "title": "Major",
+      "color": "7918f9"
+    },
+    {
+      "title": "Extra",
+      "color": "44d649"
+    }
+  ],
+  "columns": [
+    {
+      "stages": [
+        0,
+        3
+      ]
+    },
+    {
+      "stages": [
+        1
+      ]
+    },
+    {
+      "stages": [
+        2
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "title": "Ideas",
+      "tasks": [
+        6,
+        7,
+        8,
+        12,
+        13,
+        10,
+        11
+      ]
+    },
+    {
+      "title": "Doing",
+      "tasks": [
+        1,
+        9
+      ]
+    },
+    {
+      "title": "Done",
+      "tasks": [
+        0
+      ]
+    },
+    {
+      "title": "ToDo",
+      "tasks": [
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "category": 0,
+      "title": "[Editor] Add property for project",
+      "details": "Project name and icon/cover. Save(path based on create) and Export button."
+    },
+    {
+      "category": 2,
+      "title": "Complete [Editor]",
+      "details": ""
+    },
+    {
+      "category": 2,
+      "title": "Complete [DesignTab]",
+      "details": ""
+    },
+    {
+      "category": 2,
+      "title": "Complete [LibraryTab]",
+      "details": ""
+    },
+    {
+      "category": 2,
+      "title": "Complete [HomeTab]",
+      "details": "Starting tab. Kinda like FB or Twitter. Twitter might work best."
+    },
+    {
+      "category": 2,
+      "title": "Complete [ProfileTab]",
+      "details": "Be like Twitter on profile. Simple and straightforward. Use acc profile pic as icon to identify. Change the design and probably put the username instead so it stands out between the menu button but does not highlight itself. Just make it look distinct."
+    },
+    {
+      "category": 0,
+      "title": "[DesignTab] Create Add button > [AddProject]",
+      "details": "On click, a window with two tab: create and existing."
+    },
+    {
+      "category": 0,
+      "title": "[DesignTab>AddProject] Add inputs to CreateTab",
+      "details": "Project name, icon, path. It creates a JSON file that will have a different extension name. (fvd feel.vibes.design). And two button: create and cancel."
+    },
+    {
+      "category": 0,
+      "title": "[DesignTab>AddProject] Add inputs to ExistingTab",
+      "details": "Path input that leads to the project json file. And two buttons: add and cancel"
+    },
+    {
+      "category": 3,
+      "title": "Polish [Editor]",
+      "details": ""
+    },
+    {
+      "category": 3,
+      "title": "Create [SearchTab] in [Menu]",
+      "details": "Searches everything, from users, music, or design."
+    },
+    {
+      "category": 0,
+      "title": "Concept for [HomeTab] post design",
+      "details": "> posting a music will create a rectangular object that has:\n +cover_art\n +title \n +type [design or music]\n +buttons: play (just a clip), like, and download (if allowed)\n> posting design will create a rectangular object that has:\n +cover/icon [left side]\n +title\n +type [design or music]\n +buttons:: like and download"
+    },
+    {
+      "category": 0,
+      "title": "Create fullscreen button in [Widgets]",
+      "details": "Copy the concept of youtube when on fullscreen. Everythong goes away except widgets on initial click. Upon a second, widgets will dissapear.\n\nReason: this creates the fact that the music can be wallpaper material."
+    },
+    {
+      "category": 3,
+      "title": "Recreate UI and reference Youtube for design",
+      "details": "Copy menu button of yt. Put line dividers on buttons that doesn't match category. e.g. library and design together.\n\nMake the background a single color for all apart for widgets to remove panel divide lines. Make buttons and posts rounded."
+    }
+  ]
+}

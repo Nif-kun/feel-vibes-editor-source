@@ -1,0 +1,330 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://assets/fonts/GoogleSans/GoogleSans-Medium.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fonts/GoogleSans/GoogleSans-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://themes/layouts/Docker.tres" type="Theme" id=3]
+[ext_resource path="res://addons/dockable_container/layout_split.gd" type="Script" id=4]
+[ext_resource path="res://addons/dockable_container/layout_panel.gd" type="Script" id=5]
+[ext_resource path="res://addons/dockable_container/layout.gd" type="Script" id=6]
+[ext_resource path="res://addons/dockable_container/dockable_container.gd" type="Script" id=7]
+[ext_resource path="res://assets/icons/material/white_48dp/account_circle_white_48dp.svg" type="Texture" id=8]
+[ext_resource path="res://assets/icons/material/white_48dp/home_white_48dp.svg" type="Texture" id=9]
+[ext_resource path="res://assets/icons/material/white_48dp/library_music_white_48dp.svg" type="Texture" id=10]
+[ext_resource path="res://assets/icons/material/white_48dp/search_white_48dp.svg" type="Texture" id=11]
+[ext_resource path="res://assets/icons/material/white_48dp/brush_white_48dp.svg" type="Texture" id=12]
+[ext_resource path="res://scenes/player/widgets/Widgets.tscn" type="PackedScene" id=13]
+
+[sub_resource type="Resource" id=1]
+resource_name = "Tabs"
+script = ExtResource( 5 )
+names = PoolStringArray( "Menu", "Header" )
+current_tab = 0
+
+[sub_resource type="Resource" id=11]
+resource_name = "Tabs"
+script = ExtResource( 5 )
+names = PoolStringArray( "Content" )
+current_tab = 0
+
+[sub_resource type="Resource" id=12]
+resource_name = "Split"
+script = ExtResource( 4 )
+direction = 0
+percent = 0.0
+first = SubResource( 1 )
+second = SubResource( 11 )
+
+[sub_resource type="Resource" id=4]
+resource_name = "Tabs"
+script = ExtResource( 5 )
+names = PoolStringArray( "Widgets" )
+current_tab = 0
+
+[sub_resource type="Resource" id=5]
+resource_name = "Split"
+script = ExtResource( 4 )
+direction = 1
+percent = 1.0
+first = SubResource( 12 )
+second = SubResource( 4 )
+
+[sub_resource type="Resource" id=6]
+resource_name = "Layout"
+script = ExtResource( 6 )
+root = SubResource( 5 )
+hidden_tabs = {
+}
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.105882, 0.109804, 0.113725, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.132277, 0.135247, 0.138216, 1 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=23]
+default_font = SubResource( 22 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+content_margin_left = 20.0
+bg_color = Color( 0.6, 0.6, 0.6, 0.203922 )
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id=17]
+content_margin_left = 20.0
+bg_color = Color( 0.6, 0.6, 0.6, 0.203922 )
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+content_margin_left = 25.0
+
+[sub_resource type="ButtonGroup" id=25]
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.564706, 0.564706, 0.564706, 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+expand_margin_left = 45.0
+
+[sub_resource type="StyleBoxFlat" id=29]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 0.160784, 0.160784, 0.160784, 1 )
+
+[sub_resource type="DynamicFont" id=47]
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=48]
+default_font = SubResource( 47 )
+
+[sub_resource type="StyleBoxFlat" id=45]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 10.0
+content_margin_bottom = 25.0
+bg_color = Color( 0.105882, 0.109804, 0.113725, 1 )
+
+[node name="Home" type="Control"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Docker" type="Container" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+theme = ExtResource( 3 )
+script = ExtResource( 7 )
+tabs_visible = false
+layout = SubResource( 6 )
+
+[node name="Header" type="PanelContainer" parent="Docker"]
+visible = false
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+custom_styles/panel = SubResource( 14 )
+
+[node name="HBox" type="HBoxContainer" parent="Docker/Header"]
+margin_right = 1024.0
+margin_bottom = 60.0
+
+[node name="MenuExpand" type="TextureButton" parent="Docker/Header/HBox"]
+margin_bottom = 60.0
+
+[node name="TitleTexture" type="TextureRect" parent="Docker/Header/HBox"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 60.0
+
+[node name="TitleLabel" type="Label" parent="Docker/Header/HBox"]
+margin_left = 8.0
+margin_top = 19.0
+margin_right = 78.0
+margin_bottom = 40.0
+text = "FeelVibes"
+
+[node name="Path" type="Label" parent="Docker/Header/HBox"]
+margin_left = 82.0
+margin_top = 19.0
+margin_right = 82.0
+margin_bottom = 40.0
+
+[node name="Menu" type="PanelContainer" parent="Docker"]
+margin_top = 0.5
+margin_right = 250.0
+margin_bottom = 598.5
+rect_min_size = Vector2( 250, 0 )
+custom_styles/panel = SubResource( 9 )
+
+[node name="VBox" type="VBoxContainer" parent="Docker/Menu"]
+margin_right = 250.0
+margin_bottom = 563.0
+theme = SubResource( 23 )
+custom_constants/separation = 0
+
+[node name="Profile" type="MarginContainer" parent="Docker/Menu/VBox"]
+margin_right = 250.0
+margin_bottom = 53.0
+custom_constants/margin_top = 8
+custom_constants/margin_bottom = 8
+
+[node name="Button" type="Button" parent="Docker/Menu/VBox/Profile"]
+margin_top = 8.0
+margin_right = 250.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 37 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 24 )
+custom_styles/normal = SubResource( 21 )
+toggle_mode = true
+group = SubResource( 25 )
+text = " Profile"
+icon = ExtResource( 8 )
+align = 0
+expand_icon = true
+
+[node name="Home" type="MarginContainer" parent="Docker/Menu/VBox"]
+margin_top = 53.0
+margin_right = 250.0
+margin_bottom = 106.0
+custom_constants/margin_top = 8
+custom_constants/margin_bottom = 8
+
+[node name="Button" type="Button" parent="Docker/Menu/VBox/Home"]
+margin_top = 8.0
+margin_right = 250.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 37 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 24 )
+custom_styles/normal = SubResource( 21 )
+toggle_mode = true
+group = SubResource( 25 )
+text = " Home"
+icon = ExtResource( 9 )
+align = 0
+expand_icon = true
+
+[node name="Library" type="MarginContainer" parent="Docker/Menu/VBox"]
+margin_top = 106.0
+margin_right = 250.0
+margin_bottom = 159.0
+custom_constants/margin_top = 8
+custom_constants/margin_bottom = 8
+
+[node name="Button" type="Button" parent="Docker/Menu/VBox/Library"]
+margin_top = 8.0
+margin_right = 250.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 37 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 24 )
+custom_styles/normal = SubResource( 21 )
+toggle_mode = true
+group = SubResource( 25 )
+text = " Library"
+icon = ExtResource( 10 )
+align = 0
+expand_icon = true
+
+[node name="Design" type="MarginContainer" parent="Docker/Menu/VBox"]
+margin_top = 159.0
+margin_right = 250.0
+margin_bottom = 212.0
+custom_constants/margin_top = 8
+custom_constants/margin_bottom = 8
+
+[node name="Button" type="Button" parent="Docker/Menu/VBox/Design"]
+margin_top = 8.0
+margin_right = 250.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 37 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 24 )
+custom_styles/normal = SubResource( 21 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "Design"
+icon = ExtResource( 12 )
+align = 0
+expand_icon = true
+
+[node name="Content" type="PanelContainer" parent="Docker"]
+margin_top = 0.5
+margin_right = 1024.0
+margin_bottom = 598.5
+custom_styles/panel = SubResource( 15 )
+
+[node name="DesignTab" type="PanelContainer" parent="Docker/Content"]
+margin_right = 774.0
+margin_bottom = 563.0
+
+[node name="VBox" type="VBoxContainer" parent="Docker/Content/DesignTab"]
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 760.0
+margin_bottom = 549.0
+
+[node name="Search" type="HBoxContainer" parent="Docker/Content/DesignTab/VBox"]
+margin_right = 746.0
+margin_bottom = 40.0
+
+[node name="Icon" type="TextureRect" parent="Docker/Content/DesignTab/VBox/Search"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+
+[node name="LineEdit" type="LineEdit" parent="Docker/Content/DesignTab/VBox/Search"]
+show_behind_parent = true
+margin_left = 48.0
+margin_right = 746.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 28 )
+
+[node name="Contents" type="ScrollContainer" parent="Docker/Content/DesignTab/VBox"]
+margin_top = 48.0
+margin_right = 746.0
+margin_bottom = 535.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/bg = SubResource( 29 )
+scroll_horizontal_enabled = false
+
+[node name="VBox" type="VBoxContainer" parent="Docker/Content/DesignTab/VBox/Contents"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 736.0
+margin_bottom = 10.0
+size_flags_horizontal = 3
+
+[node name="Create" type="TextureButton" parent="Docker/Content/DesignTab/VBox/Contents/VBox"]
+margin_right = 726.0
+
+[node name="Widgets" type="PanelContainer" parent="Docker" instance=ExtResource( 13 )]
+anchor_top = 0.82
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 107.5
+margin_bottom = 34.5
+mouse_filter = 2
+theme = SubResource( 48 )
+custom_styles/panel = SubResource( 45 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
