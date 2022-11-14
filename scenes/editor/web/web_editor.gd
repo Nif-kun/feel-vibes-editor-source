@@ -167,4 +167,4 @@ func _on_SaveFile_file_selected(file):
 
 
 func _on_Return_pressed():
-	Window.open(home_url, "_self")
+	Window.returnHome()
